@@ -1,0 +1,178 @@
+:root{
+  --bg:#0f172a;       /* slate-900 */
+  --card:#111827;      /* gray-900 */
+  --muted:#94a3b8;      /* slate-400 */
+  --text:#e5e7eb;      /* gray-200 */
+  --accent:#22c55e;    /* green-500 */
+  --accent-2:#3b82f6;  /* blue-500 */
+  --chip:#1f2937;      /* gray-800 */
+  --warn:#f59e0b;
+  --danger:#ef4444;
+  --shadow:0 10px 25px rgba(0,0,0,.35);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+  background: radial-gradient(1200px 900px at 20% -10%, #1e293b 0%, #0b1324 60%, #070a13 100%);
+  color:var(--text);
+}
+header{
+  position:sticky;top:0;z-index:5;
+  backdrop-filter: blur(8px);
+  background:rgba(7,10,19,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.wrap{max-width:1200px;margin:0 auto;padding:18px 18px;}
+.title{display:flex;align-items:center;gap:10px}
+.title h1{margin:0;font-size:1.4rem;letter-spacing:.2px}
+.pill{
+  font-size:.75rem;padding:4px 10px;border-radius:999px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;box-shadow:var(--shadow);
+}
+
+.layout{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-top:14px}
+@media (max-width: 900px){
+  .layout{grid-template-columns:1fr}
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+.card h3{margin:0 0 10px 0;font-size:1rem;color:#e2e8f0}
+.muted{color:var(--muted);font-size:.92rem}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--chip);border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;padding:6px 10px;font-size:.85rem;cursor:pointer;
+}
+.chip input{margin:0}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row > *{flex:1 1 140px}
+
+input[type="text"], select, input[type="number"]{
+  background:#0b1220;color:var(--text);border:1px solid rgba(255,255,255,.08);
+  padding:10px;border-radius:10px;outline:none;width:100%;
+}
+input[type="text"]::placeholder{color:#64748b}
+button{
+  background: linear-gradient(90deg,var(--accent),#06b6d4);
+  color:white;border:none;padding:10px 14px;border-radius:12px;
+  cursor:pointer;font-weight:600;box-shadow: var(--shadow);
+}
+button.ghost{
+  background:transparent;border:1px solid rgba(255,255,255,.14);
+}
+button:hover{filter:brightness(1.05)}
+
+.section-header{
+  display:flex;align-items:center;justify-content:space-between;margin-bottom:8px
+}
+
+/* Results */
+.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:1000px){.results{grid-template-columns:1fr}}
+.recipe{
+  position:relative;
+  display:flex;flex-direction:column;gap:8px
+}
+.badge{font-size:.75rem;background:#0c1323;border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+
+.ing-list{margin:0;padding-left:18px}
+.ing-list li{margin:3px 0}
+
+.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.heart{cursor:pointer}
+.stars{cursor:pointer;font-size:1.15rem}
+.tag{padding:2px 8px;border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:.75rem}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+
+table{width:100%;border-collapse:collapse;border:1px solid rgba(255,255,255,.08)}
+th,td{border:1px solid rgba(255,255,255,.08);padding:6px 8px;text-align:left}
+th{background:rgba(255,255,255,.05)}
+
+footer{padding:30px 0;color:#93a3bd;text-align:center}
+
+.note{font-size:.85rem;color:#9aa7bd}
+
+.filters .line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.switch{display:inline-flex;gap:8px;align-items:center}
+.switch input{accent-color:var(--accent)}
+.small{font-size:.85rem}
+
+/* Additional media queries for mobile responsiveness */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 10px;
+  }
+  .title h1 {
+    font-size: 1.2rem;
+  }
+  .card {
+    padding: 10px;
+  }
+  .recipe table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .recipe table,
+  .recipe thead,
+  .recipe tbody,
+  .recipe th,
+  .recipe td,
+  .recipe tr {
+    display: block;
+  }
+  .recipe th {
+    text-align: left;
+  }
+  .recipe tr {
+    margin-bottom: 8px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .recipe td {
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  .recipe td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 8px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
