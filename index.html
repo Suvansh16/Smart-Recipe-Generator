@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Recipe Recommender</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap title">
+      <h1>🍳 Smart Recipe Recommender</h1>
+      <span class="pill">All-in-one</span>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <aside class="card filters">
+      <div class="section-header">
+        <h3>Ingredients</h3>
+        <button id="clearSelected" class="ghost small">Clear</button>
+      </div>
+
+      <div class="row" style="margin-bottom:8px">
+        <input id="ingredientSearch" type="text" placeholder="Search ingredients..." />
+        <div class="row" style="flex:1 1 100%;gap:8px">
+          <input id="customIngredient" type="text" placeholder="Add custom ingredient (press +)" />
+          <button id="addIngredient" title="Add ingredient">+</button>
+        </div>
+      </div>
+
+      <div id="ingredientChips" class="chips" style="max-height:200px;overflow:auto;margin-bottom:10px"></div>
+      <div class="note">Tip: check what you have. We’ll match recipes that can be made fully with your selection.</div>
+
+      <hr style="border-color:rgba(255,255,255,.08);margin:14px 0">
+
+      <h3>Diet & Filters</h3>
+      <div class="line">
+        <label class="chip"><input type="checkbox" class="diet" value="vegetarian"> Vegetarian</label>
+        <label class="chip"><input type="checkbox" class="diet" value="vegan"> Vegan</label>
+        <label class="chip"><input type="checkbox" class="diet" value="gluten-free"> Gluten-Free</label>
+      </div>
+
+      <div class="row">
+        <div>
+          <label class="small muted">Difficulty</label>
+          <select id="difficulty">
+            <option value="">Any</option>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+        </div>
+        <div>
+          <label class="small muted">Max Cooking Time</label>
+          <select id="time">
+            <option value="">Any</option>
+            <option value="15">≤ 15 min</option>
+            <option value="30">≤ 30 min</option>
+            <option value="60">≤ 60 min</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:8px">
+        <div>
+          <label class="small muted">Cuisine</label>
+          <select id="cuisine">
+            <option value="">Any</option>
+            <option>Indian</option>
+            <option>Italian</option>
+            <option>Chinese</option>
+            <option>American</option>
+            <option>Global</option>
+          </select>
+        </div>
+        <div>
+          <label class="small muted">Servings</label>
+          <input id="servings" type="number" min="1" step="1" value="2" />
+        </div>
+      </div>
+      
+      <div class="row" style="margin-top:8px">
+        <div id="ratedFilter">
+          <label class="small muted">Min. Star Rating</label>
+          <select id="minRating">
+            <option value="0">Any</option>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆ & Up</option>
+            <option value="3">★★★☆☆ & Up</option>
+            <option value="2">★★☆☆☆ & Up</option>
+            <option value="1">★☆☆☆☆ & Up</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="line" style="margin-top:10px">
+        <label class="switch"><input id="partialMatch" type="checkbox" checked> <span class="small">Allow partial matches</span></label>
+        <label class="switch"><input id="sortByRating" type="checkbox"> <span class="small">Sort by rating</span></label>
+      </div>
+
+      <div class="line" style="margin-top:8px">
+        <button id="findBtn">Find Recipes</button>
+        <button id="resetAll" class="ghost">Reset</button>
+      </div>
+    </aside>
+
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <div class="card">
+        <div class="section-header">
+          <h3>Matching Recipes</h3>
+          <div class="muted small" id="matchMeta">0 found</div>
+        </div>
+        <div id="results" class="results"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <h3>My Saved & Rated Recipes</h3>
+          <div class="muted small" id="favoritesMeta"></div>
+        </div>
+        <div id="favoritesSection" class="results"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <h3>Suggested For You</h3>
+          <div class="muted small">Based on your favorites, ratings & diet</div>
+        </div>
+        <div id="suggestions" class="results"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="note"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
