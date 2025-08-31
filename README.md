@@ -1,9 +1,10 @@
-🍳 Recipe-Recommendation-System
-📌 Project Overview
+# 🍳 Recipe-Recommendation-System
+
+# 📌 Project Overview
 
 The Recipe Recommendation System is a web application that suggests recipes based on available ingredients and dietary preferences. Users can input ingredients, filter by dietary restrictions, and explore multiple recipes with step-by-step instructions and nutritional information. It provides a simple, interactive, and mobile-friendly interface for personalized cooking experiences.
 
-🚀 Features
+# 🚀 Features
 
 🥗 Ingredient Input – Enter available ingredients manually.
 
@@ -19,21 +20,22 @@ The Recipe Recommendation System is a web application that suggests recipes base
 
 📱 Responsive Design – Clean, mobile-friendly interface.
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 
-Frontend: HTML, CSS, JavaScript
+- **Frontend: HTML, CSS, JavaScript
 
-Logic/Processing: JavaScript (recipe generation & filtering)
+- **Logic/Processing: JavaScript (recipe generation & filtering)
 
-Documentation: Text-based project approach in document.txt
+- **Documentation: Text-based project approach in document.txt
 
-📂 Project Structure
+# 📂 Project Structure
+```
 📁 recipe-recommendation-system
 │-- 📄 final.html       # Main UI for recipe input and results
 │-- 📄 script.js        # Core logic for recipe generation & filters
 │-- 📄 style.css        # Custom styling for UI
 │-- 📄 document.txt     # Project approach and documentation
-
+```
 🔧 Installation & Setup
 
 Clone the repository
