@@ -36,46 +36,43 @@ The Recipe Recommendation System is a web application that suggests recipes base
 │-- 📄 style.css        # Custom styling for UI
 │-- 📄 document.txt     # Project approach and documentation
 ```
-🔧 Installation & Setup
+# 🔧 Installation & Setup
 
 Clone the repository
 
-git clone https://github.com/your-username/recipe-recommendation-system.git
-cd recipe-recommendation-system
+- git clone https://github.com/your-username/recipe-recommendation-system.git
+- cd recipe-recommendation-system
 
 
-Open the project
+# Open the project
 
-Simply open final.html in your browser.
+- Simply open final.html in your browser.
 
-Ensure script.js and style.css are in the same directory for proper functionality.
+- Ensure script.js and style.css are in the same directory for proper functionality.
 
-📝 Usage
+# 📝 Usage
 
-Open the app in your browser.
+- Open the app in your browser.
 
-Enter ingredients or select from available options.
+- Enter ingredients or select from available options.
 
-Apply dietary filters (vegetarian, gluten-free, etc.).
+- Apply dietary filters (vegetarian, gluten-free, etc.).
 
-Browse through suggested recipes with cooking steps and nutrition info.
+- Browse through suggested recipes with cooking steps and nutrition info.
 
-Save your favorite recipes for quick access later.
+- Save your favorite recipes for quick access later.
 
-🚀 Future Enhancements
+# 🚀 Future Enhancements
 
-📊 Advanced nutritional breakdown with macros.
+ - 📊 Advanced nutritional breakdown with macros.
 
-🤖 AI-powered personalized recipe suggestions.
+- 🤖 AI-powered personalized recipe suggestions.
 
-🛒 Grocery list generator from selected recipes.
+- 🛒 Grocery list generator from selected recipes.
 
-🌍 Multi-language support.
+- 🌍 Multi-language support.
 
-🤝 Contributing
 
-Contributions are welcome! Feel free to fork this repo, improve features, and submit pull requests. 😊
-
-📜 License
+# 📜 License
 
 This project is open-source under the MIT License.
