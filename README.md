@@ -1,8 +1,8 @@
-# 🍳 Recipe-Recommendation-System
+# 🍳 Smart Recipe Recommender
 
 # 📌 Project Overview
 
-The Recipe Recommendation System is a web application that suggests recipes based on available ingredients and dietary preferences. Users can input ingredients, filter by dietary restrictions, and explore multiple recipes with step-by-step instructions and nutritional information. It provides a simple, interactive, and mobile-friendly interface for personalized cooking experiences.
+The Smart Recipe Recommender is a web application that suggests recipes based on available ingredients and dietary preferences. Users can input ingredients, filter by dietary restrictions, and explore multiple recipes with step-by-step instructions and nutritional information. It provides a simple, interactive, and mobile-friendly interface for personalized cooking experiences.
 
 # 🚀 Features
 
@@ -30,7 +30,7 @@ The Recipe Recommendation System is a web application that suggests recipes base
 
 # 📂 Project Structure
 ```
-📁 recipe-recommendation-system
+📁 Smart Recipe Recommender
 │-- 📄 final.html       # Main UI for recipe input and results
 │-- 📄 script.js        # Core logic for recipe generation & filters
 │-- 📄 style.css        # Custom styling for UI
@@ -40,8 +40,8 @@ The Recipe Recommendation System is a web application that suggests recipes base
 
 Clone the repository
 
-- git clone https://github.com/your-username/recipe-recommendation-system.git
-- cd recipe-recommendation-system
+- git clone https://github.com/your-username/Smart Recipe Recommender.git
+- cd Smart Recipe Recommender
 
 
 # Open the project
